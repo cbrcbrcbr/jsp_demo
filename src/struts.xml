@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+	<package name="struts2" namespace="/" extends="json-default">
+		<action name="user"  class="userAction">
+		<result name="ok">index.jsp</result>
+		<result name="no">login.jsp</result>
+		<result name="nok" type="redirect">login.jsp</result>
+		<result name="zhuceno">message.jsp</result>
+		</action>
+		<action name="ke"  class="keAction">
+		<result name="ok">selectKe1.jsp</result>
+		<result name="addok">message.jsp</result>
+		<result name="addno">message.jsp</result>
+		<result name="updateok">updateKe.jsp</result>
+		</action>
+	</package>
+</struts>
